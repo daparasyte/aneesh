@@ -52,7 +52,7 @@
       // Draw the star
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-      ctx.fillStyle = '#FFFFFF'; // Star color
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'; // Subtle stars
       ctx.fill();
     }
 
