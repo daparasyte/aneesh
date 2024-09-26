@@ -1,35 +1,23 @@
-/* Custom styles for consistent theming */
+/* Basic styles for the website */
 body {
   font-family: 'Inter', sans-serif;
 }
 
-.navbar a:hover {
-  color: #2563eb; /* Tailwind's blue-600 */
+a:hover {
+  text-decoration: none;
 }
 
-/* Theme Toggle Button */
-#theme-toggle {
-  transition: background-color 0.3s;
-}
-
-#theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-#theme-icon {
+/* Navbar */
+nav a {
   transition: color 0.3s;
 }
 
-/* Adjustments for dark mode */
-body.dark-mode .navbar,
-body.dark-mode .footer {
-  background-color: #1f2937; /* Tailwind's gray-800 */
+/* Contact Form */
+input, textarea {
+  transition: border-color 0.3s;
 }
 
-body.dark-mode .navbar a {
-  color: #d1d5db; /* Tailwind's gray-300 */
-}
-
-body.dark-mode .navbar a:hover {
-  color: #3b82f6; /* Tailwind's blue-500 */
+input:focus, textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
 }
