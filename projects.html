@@ -4,40 +4,43 @@
   <meta charset="UTF-8">
   <title>Your Name - Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50 transition-colors duration-300">
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-800 focus:outline-none">
+    <i id="theme-icon" class="fas fa-moon text-gray-800 dark:text-gray-200"></i>
+  </button>
+
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Your Name</a>
-      <ul class="navbar-nav">
-        <li><a href="index.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Same as in index.html -->
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card-container">
+  <section class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Project Card -->
-      <div class="card">
-        <img src="project1.jpg" alt="Project 1">
-        <div class="card-content">
-          <h3>Project Name</h3>
-          <p>Brief description of the project.</p>
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Project Name</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">Brief description of the project.</p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More &rarr;</a>
         </div>
       </div>
       <!-- Repeat for more projects -->
     </div>
   </section>
 
+  <!-- Footer -->
+  <!-- Same as in index.html -->
+
+  <!-- Custom JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

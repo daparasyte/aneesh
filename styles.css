@@ -1,182 +1,35 @@
-/* Base Styles */
-:root {
-  --primary-color: #2c3e50;
-  --secondary-color: #ecf0f1;
-  --accent-color: #3498db;
-  --background-color: #ffffff;
-  --text-color: #2c3e50;
-}
-
-body.dark-theme {
-  --primary-color: #ecf0f1;
-  --secondary-color: #2c3e50;
-  --accent-color: #3498db;
-  --background-color: #2c3e50;
-  --text-color: #ecf0f1;
-}
-
+/* Custom styles for consistent theming */
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-/* Navbar */
-.navbar {
-  background-color: var(--primary-color);
-  padding: 15px;
-}
-
-.navbar a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  margin-right: 20px;
 }
 
 .navbar a:hover {
-  color: var(--accent-color);
+  color: #2563eb; /* Tailwind's blue-600 */
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 700;
+/* Theme Toggle Button */
+#theme-toggle {
+  transition: background-color 0.3s;
 }
 
-/* About Section */
-#about {
-  padding: 60px 20px;
+#theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+#theme-icon {
+  transition: color 0.3s;
 }
 
-.profile-box {
-  background-color: var(--secondary-color);
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  margin: 20px;
+/* Adjustments for dark mode */
+body.dark-mode .navbar,
+body.dark-mode .footer {
+  background-color: #1f2937; /* Tailwind's gray-800 */
 }
 
-.profile-photo {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 15px;
+body.dark-mode .navbar a {
+  color: #d1d5db; /* Tailwind's gray-300 */
 }
 
-.profile-box h1 {
-  margin: 0;
-}
-
-.tagline {
-  font-style: italic;
-  margin: 10px 0;
-}
-
-.social-links a {
-  color: var(--accent-color);
-  margin: 0 10px;
-  font-size: 1.5rem;
-}
-
-.social-links a:hover {
-  color: var(--text-color);
-}
-
-/* Sections */
-section {
-  padding: 60px 20px;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-
-/* Card Container */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  background-color: var(--secondary-color);
-  margin: 15px;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.card-content h3 {
-  margin-top: 0;
-}
-
-/* Contact Form */
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#contact-form {
-  max-width: 500px;
-  margin: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: var(--primary-color);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--primary-color);
-  border-radius: 4px;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-}
-
-#contact-form button {
-  padding: 10px 20px;
-  background-color: var(--accent-color);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Schedule Button */
-.schedule-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--accent-color);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 10px;
+body.dark-mode .navbar a:hover {
+  color: #3b82f6; /* Tailwind's blue-500 */
 }
